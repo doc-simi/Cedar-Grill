@@ -1,0 +1,125 @@
+.menu {
+  grid-column: center-start / center-end;
+
+  background-color: $color-grey-1;
+  padding: 7.5rem 3rem;
+  display: grid;
+  gap: 3rem;
+  z-index: 1000;
+
+  @media only screen and (max-width: $bp-small--1) {
+    padding: 7.5rem 0;
+  }
+
+  &__heading {
+    text-align: center;
+
+    span {
+      color: $color-gradient;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 21%));
+    gap: 6rem;
+    justify-content: center;
+
+    @media only screen and (max-width: $bp-small--1) {
+      gap: 2rem;
+    }
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 18rem repeat(3, min-content);
+    padding: .8rem;
+    padding-bottom: 1.6rem;
+    background-color: #fff;
+    row-gap: 1.2rem;
+    box-shadow: 0 1rem 2rem .5rem rgba($color-grey-3, .8);
+    overflow: hidden;
+
+    &:hover {
+      & .menu__name::after {
+        width: 105%;
+        transform: translateX(-5%);
+      }
+
+      & .menu__name {
+        color: #fff;
+        transform: translateX(5%);
+      }
+
+      & .menu__order {
+        background-position: 0;
+        border: 1px solid $color-gradient;
+        color: $color-gradient;
+
+        &:active {
+          color: $primary-color;
+        }
+      }
+      
+
+      & .menu__img {
+        border-radius: 58% 42% 72% 28% / 29% 81% 19% 71%;
+      }
+
+    }
+  }
+
+  &__img {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .4s;
+    
+  }
+
+  &__name {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    font-size: 1.9rem;
+    font-weight: 500;
+    position: relative;
+    padding: .5rem 0;
+    transition: all .2s;
+
+    &::after {
+      content: "";
+      display: block;
+      height: 100%;
+      width: 2px;
+      background-color: $color-gradient;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transition: all .2s;
+      z-index: -100;
+    }
+  }
+  
+  &__price {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+
+  &__time {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    font-size: 1.2rem;
+    font-weight: 400;
+    //justify-self: end;
+  }
+
+  &__order {
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+}

@@ -1,0 +1,175 @@
+$primary-color: #333333;
+$primary-color-light: #585858;
+$secondary-color: #ffd700;
+$secondary-color-light: #ffdf33;
+$secondary-color-dark: #cea70a;
+$color-gradient: #eb4a04;
+$color-gradient--2: #c13c03;
+$color-gradient--3: #ffe604;
+$color-gradient--4: #ff5404;
+
+$color-grey-1: #f8f8f8;
+$color-grey-2: #cacaca;
+$color-grey-3: #efefef;
+
+$font-primary: "Rokkitt", serif;
+$font-secondary: "Montserrat", sans-serif;
+
+$font-size-primary: 1.6rem;
+$font-size-m: 2rem;
+$font-size-sm: 1.4rem;
+
+$border-radius-style-1: 47% 53% 61% 39% / 45% 30% 70% 55%;
+$border-radius-style-2: 31% 69% 23% 77% / 56% 78% 22% 44%;
+
+
+/// BREAKPOINTS
+
+$bp-large: 81.25em; // 1300px
+$bp-medium: 62.5em; // 1000px
+$bp-small: 50em; // 800px
+$bp-small--1: 41.25em; // 660px
+$bp-small--2: 31.25em; // 500px
+
+
+@keyframes rotate {
+  0% {
+    transfrom: rotate(0);
+  }
+  
+  25% {
+    transform: rotate(100deg);
+  }
+  
+  50% {
+    transform: rotate(170deg);
+  }
+  
+  75% {
+    transform: rotate(285deg);
+  }
+  
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes header__images {
+  0% {
+    opacity: 0;
+  }
+
+  10% {
+    transform: translate(100%, -100%) scale(1);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes header-animate-1 {
+  0% {
+    translate: -30rem 0;
+    letter-spacing: -3rem;
+    scale: .1;
+  }
+
+  20% {
+    translate: 0 0;
+  }
+
+  50% {
+    scale: .5;
+  }
+
+  80% {
+    scale: 1;
+  }
+
+
+  100% {
+    letter-spacing: normal;
+  }
+}
+
+@keyframes header-animate-2 {
+  0% { opacity: 0;}
+  14% { opacity: 1;}
+  28% { opacity: 0;}
+  42% { opacity: 1;}
+  57% { opacity: 0;}
+  71% { opacity: 1;}
+  85% { opacity: 0;}
+  100% { opacity: 1;}
+}
+
+@keyframes header-animate-3 {
+  0% {
+    opacity: 0;
+    transform: translateX(20rem);
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes header-animate-2b {
+  0% { transform: translateY(10rem); opacity: 0;}
+  10% { transform: translateY(10rem); opacity: 0;}
+  100% { transform: translateY(0);}
+}
+
+@keyframes header-animate-5 {
+  0% {opacity: 0;}
+  5% { opacity: 1;}
+  60% { width: 0;}
+  
+}
+
+@keyframes logo {
+  40% { transform: rotateY(70deg);}
+  100% { transform: rotateY(0deg);}
+}
+
+@keyframes users {
+  0% {
+    transform: translateY(4rem);
+    border-color: transparent;
+    opacity: 0;
+  }
+
+  5% {
+    opacity: 1;
+  }
+
+  60% {
+    transform: translateY(0);
+    border-color: transparent;
+  }
+
+}
+
+@keyframes nav {
+  0% { gap: 4rem;}
+}
+
+@keyframes about {
+  0% { transform: translateY(10rem);}
+  100% { transform: translateY(0);}
+}
+
+@keyframes menu__icons1 {
+  0% { width: 4rem; opacity: 0;}
+  1% { opacity: 1;}
+}
+
+@keyframes menu__icons2 {
+  0% { width: 0; }
+}

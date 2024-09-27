@@ -1,0 +1,125 @@
+.footer {
+  grid-column: full-start / full-end;
+
+  background-color: $primary-color;
+  font-size: 1.4rem;
+  color: $color-grey-1;
+  padding: 7rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 21%));
+  justify-content: center;
+  gap: 4rem;
+
+  &__location {
+    display: grid;
+    gap: 2rem;
+  }
+
+  &__logo {
+    width: 7rem;
+  }
+
+  &__socials {
+    display: grid;
+    gap: 1rem;
+  }
+
+  &__socials-icon {
+    display: flex;
+    gap: 1rem;
+  }
+
+  &__icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: $color-grey-1;
+    cursor: pointer;
+    transition: all .3s;
+
+    &:hover {
+      fill: $color-grey-2;
+      transform: translateY(-3px);
+    }
+  }
+}
+
+.opening-hours {
+  display: grid;
+  grid-template-rows: repeat(2, min-content);
+  gap: 2.5rem;
+
+  &__list {
+    display: grid;
+    gap: 1.2rem;
+    list-style: none;
+    width: 85%;
+  }
+
+  &__item {
+    display: flex;
+    align-items: start;
+    gap: .7rem;
+    transition: all .3s;
+
+    div {
+      line-height: 1; 
+      transition: all .3s;
+      font-size: 2rem;
+    }
+
+    &:hover div {
+      transform: rotate(90deg);
+    }
+
+    &:hover {
+      gap: 1rem;
+    }
+  }
+}
+
+.footer-nav {
+  display: grid;
+  grid-template-rows: repeat(2, min-content);
+  gap: 2.5rem;
+
+  &__list {
+    display: grid;
+    gap: 1.2rem;
+    list-style: none;
+  }
+
+  &__link:link,
+  &__link:visited,
+  &__link {
+    color: $color-grey-1;
+    text-decoration: none;
+    font-family: inherit;
+    display: block;
+    transition: all .3s;
+
+    &:hover {
+      color: $color-grey-2;
+      transform: translateX(3px);
+    }
+  }
+}
+
+.contact {
+  display: grid;
+  grid-template-rows: repeat(2, min-content);
+  gap: 2.5rem;
+
+  h4 {
+    margin-bottom: .6rem;
+  }
+  
+  p:not(:last-child) {
+    margin-bottom: 1.6rem;
+  }
+}
+
+.copyright {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-top: 2rem;
+}

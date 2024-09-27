@@ -1,0 +1,64 @@
+.about {
+  grid-column: center-start / center-end;
+
+  background-color: $color-grey-1;
+  padding: 8rem 5rem;
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem  5.5rem;
+
+  animation: about 1s 2.8s backwards;
+  text-align: center;
+
+  @media only screen and (max-width: $bp-small--1) {
+    grid-template-columns: 1fr;
+  }
+
+  &__header {
+    grid-column: 1 / -1;
+    text-align: center;
+  }
+
+  
+  &__item {
+    display: grid;
+    gap: 1.4rem;
+    font-size: $font-size-primary;
+    justify-items: center;
+    grid-template-rows: repeat(3, min-content);
+    
+
+    &:hover div {
+      transform: rotateZ(30deg) translate(-1.5rem, -.7rem);
+      box-shadow: inset .7rem .7rem 0rem rgba(226, 226, 226, 0.6);
+    }
+
+    h3 {
+      width: max-content;
+    }
+  }
+  
+  &__icon-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 50%;
+    height: 10rem;
+    width: 10rem;
+    transition: all .7s;
+  }
+
+  &__icon {
+    height: 6rem;
+    width: 6rem;
+  }
+  
+}
+
+.icon {
+  &-building {
+    fill: $secondary-color;
+  }
+}
